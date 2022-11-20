@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML_DAVE_GRAY</title>
+    <style>
+      html {
+        font-size: 22px;
+      }
+      body {
+        background-color: #333;
+        color: whitesmoke;
+      }
+      a {
+        color: lightskyblue;
+      }
+      a:hover,
+      a:visited {
+        color: lightskyblue;
+      }
+      table,th,td,tr{
+        border: 1px whitesmoke solid;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- forms -->
+    <article>
+        <h2>contact Me</h2>
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Personal Information</legend>
+            <p>
+                <label for="firstName">firstName</label>
+                <input type="text" id="firstName" name="firstName" placeholder="enter firstName" required autocomplete="on" autofocus>
+            </p>
+            <p>
+                <label for="lastName">lastName</label>
+                <input type="text" id="lastName" name="lastName" placeholder="enter lastName" required autocomplete="on">
+            </p>
+            <p>
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" placeholder="enter password" required>
+            </p>
+            <p>
+                <label for="phone">phone</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="enter phone" required>
+            </p>
+            <p>
+                <label for="decade">decade</label>
+                <input type="number" id="decade" name="decade" min="1950" max="2020" step="10" value="1980">
+            </p>
+            <p>
+                <label for="coffee">coffee</label>
+                <select name="coffee" id="coffee">
+                    <option value="">select coffee</option>
+                    <optgroup label="label1">
+                        <option value="sdf">sdfssdf</option>
+                        <option value="hgj">sdfg</option>
+                    </optgroup>
+                    <optgroup label="label2">
+                        <option selected value="dgf">fgfdg</option>
+                        <option value="hgj">gfjhhjg</option>
+                    </optgroup>
+                    <optgroup label="others">
+                        <option value="fugit">gkhfg</option>
+                        <option value="fugit">gkhfg</option>
+                        <option value="fugit">gkhfg</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="coffee">coffee</label>
+                <input type="text" id="coffee" name="coffee" list="coffee-list" placeholder="search coffee">
+                <datalist id="coffee-list">
+                    <option value="coffee">coffee-zero</option>
+                    <option value="coffee-1">coffee-one</option>
+                    <option value="coffee-2">coffee-two</option>
+                    <option value="coffee-3">coffee-three</option>
+                    <option value="coffee4">
+                    <option value="coffee5">
+                    <option value="coffee6">
+                </datalist>
+            </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>What is your favorite food?</legend>
+                <p>
+                    <input type="radio" name="food" id="tacos" value="tacos">
+                    <label for="tacos">Tacos</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="pizza" value="pizza">
+                    <label for="pizza">Pizza</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="other" value="other">
+                    <label for="other">Other</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Do you have pets?</legend>
+                <p>
+                    <input type="checkbox" name="pets" id="dog" value="dog">
+                    <label for="dog">Dog</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="cat" value="cat">
+                    <label for="cat">Cat</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="fish" value="fish">
+                    <label for="fish">Fish</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="otherPet" value="otherPet">
+                    <label for="otherPet">Other</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Send me a note</legend>
+                <p>
+                    <label for="message">Enter your message here</label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+                </p>
+            </fieldset>
+            <br>
+            <button type="submit">submit</button>
+            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit Post</button>
+            <button type="reset">Reset</button>
+        </form>
+    </article>
+
+    <hr>
+    <table id="table">
+        <caption>Hello lastName is table</caption>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sdfj</td>
+                <td>sdjj</td>
+            </tr>
+            <tr>
+                <td colspan="2">sdsfsfj</td>
+                <!-- <td>sdjj</td> -->
+            </tr>
+            <tr>
+                <td rowspan="2">sdfj</td>
+                <td>ffgh</td>
+            </tr>
+            <tr>
+                <td>ghgfhdf</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- figure tag -->
+    <figure>
+        <figcaption>An Example of HTML code</figcaption>
+        <!-- code tag is inline element and it has some inbuilt font-family -->
+        <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+    </figure>
+
+    <!-- add links -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#list">list section</a>
+            </li>
+            <li>
+                <a href="#section1">section1</a>
+            </li>
+            <li>
+                <a href="#section2">section2</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- unordered list -->
+    <section id="list">
+      <ul>
+        <li>hello SpaceX <img src="images/5842a770a6515b1e0ad75afe.png" alt="spaceX image" title="logo of SpaceX" loading="lazy" width="200px" height="70px"></li>
+        <li>sdfsd</li>
+        <li>sgfsdd</li>
+        <li>sdfsd</li>
+      </ul>
+      <!-- ordered list -->
+      <ol>
+        <li>sdfl</li>
+        <li>sdfs</li>
+        <li>gfhd</li>
+        <li>jfgh</li>
+      </ol>
+      <!-- description list -->
+      <dl>
+        <dt>i am descrition terms</dt>
+        <dd>ok i am descrition details</dd>
+        <dt>i am descrition terms</dt>
+        <dd>ok i am descrition details</dd>
+        <dt>i am descrition terms</dt>
+        <dd>ok i am descrition details</dd>
+      </dl>
+    </section>
+
+    <section id="section1">
+      <h1>hello there</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        <em>Voluptatem sunt</em>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, saepe.
+        <strong>Tempora accusantium</strong>
+      </p>
+      <address>
+        Lorem ipsum
+        <abbr title="this is wonderful place for vacation">dolor</abbr> sit amet
+        consectetur adipisicing elit. <br />
+        In consectetur eos id odit culpa ipsa quis, necessitatibus <br />
+        eligendi porro error corporis adipisci amet reiciendis <br />
+        nostrum pariatur maxime quas possimus doloremque?
+      </address>
+      <hr />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+        magni commodi delectus aliquam perspiciatis ullam! Aliquid possimus
+        tempore hic similique ab enim eaque culpa debitis perspiciatis omnis
+        incidunt, natus atque. Laborum odit optio repellendus? Quasi quam vel,
+        soluta eligendi similique esse pariatur quo! Perspiciatis totam itaque
+        repellendus ipsum tempora deserunt dolor ea quidem cupiditate veniam,
+        dicta quaerat corrupti velit sit! Mollitia magnam illum iure nesciunt
+        explicabo soluta, fugiat necessitatibus odio fuga, quas voluptate
+        doloremque debitis sapiente repudiandae? Ullam modi tenetur mollitia,
+        aliquam, exercitationem, libero facere esse deserunt similique
+        blanditiis quidem. Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Perferendis labore aliquid sint consectetur fugiat natus quas
+        distinctio aliquam iure asperiores recusandae hic fuga, eveniet
+        inventore cumque neque, amet enim eius. Deleniti provident animi id
+        ratione nulla ipsam ducimus praesentium vero enim quasi dolorem culpa
+        similique dicta, magnam eaque aperiam, alias, soluta fuga harum corrupti
+        doloribus veniam. Placeat voluptatibus alias quisquam? Nulla modi atque
+        autem, at expedita quaerat molestiae. Assumenda aspernatur animi ipsam.
+        Eaque corrupti rem facere cum qui, voluptate vel dignissimos. Quia
+        praesentium eveniet tenetur, sit optio iste nulla nihil. Illo, nulla
+        saepe? Nam quis, quia illum eaque vel molestias nobis officia
+        consequuntur possimus suscipit reiciendis odio rem nisi culpa alias fuga
+        quae ut ex. Vel at error ea nam. Odit, aspernatur veritatis! Ducimus aut
+        eaque architecto quis quos? Ad doloremque iure, expedita eaque,
+        deserunt, sunt eum ratione ab cum error provident beatae recusandae
+        dolore veritatis similique nihil dicta hic! Dolor sapiente temporibus
+        eligendi officia ut placeat odit sed, delectus dolore velit dignissimos,
+        optio aperiam fugit ea ipsum asperiores. Quos esse aperiam voluptate id
+        perspiciatis tempora atque possimus quia officia? Libero, vero amet
+        temporibus enim exercitationem perferendis sit unde voluptates assumenda
+        animi cupiditate soluta corrupti quasi sunt modi beatae rerum asperiores
+        aut quod quisquam eaque praesentium laboriosam. Adipisci, sit explicabo?
+        Cum molestiae aperiam nisi dolores illum fuga alias suscipit dignissimos
+        voluptate repudiandae quo rem a laudantium, accusamus similique aliquid
+        in excepturi vero, voluptas magnam obcaecati hic quos. Culpa, placeat
+        vel. Quos quo nihil eos quasi, sint odio culpa iure obcaecati eaque
+        cupiditate labore neque adipisci, impedit voluptatum itaque dicta
+        tenetur laborum quidem mollitia at ullam odit? Sapiente aspernatur at
+        eos.
+      </p>
+    </section>
+    <section id="section2">
+      <h1>hello</h1>
+      <hr />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptate,
+        tempore optio nemo obcaecati adipisci sed neque totam delectus corrupti
+        explicabo, excepturi harum voluptatibus accusantium necessitatibus
+        quibusdam deserunt debitis sint. Illo, facilis voluptatem enim dolorem
+        rerum adipisci! Nostrum sequi nihil sapiente veritatis laborum voluptas
+        iure, ducimus dolores. Nobis ipsum, beatae sapiente in laborum dolor qui
+        distinctio nisi, quidem, magnam obcaecati! Est ab distinctio odio
+        voluptates debitis rerum sequi hic minima explicabo dicta praesentium
+        dolorum esse sint, porro facilis obcaecati molestiae quia consectetur,
+        voluptatum labore numquam molestias. Dolorum doloribus odio
+        voluptatibus! Officia commodi ut in earum velit ea saepe at magnam
+        fugiat pariatur aliquid, quisquam a nemo blanditiis ipsa vel, provident
+        aspernatur vero repellat, sapiente iusto recusandae? Debitis vel facilis
+        ullam! Nam, quasi. Sunt aliquam voluptas consequuntur facilis nam
+        quibusdam autem rem, aut quia necessitatibus iusto blanditiis? A
+        reprehenderit praesentium voluptas dolorum sequi blanditiis omnis nam
+        deserunt, eum, quod exercitationem quas. Facilis excepturi eveniet
+        labore inventore, dicta qui placeat, repellat molestias ipsa optio nobis
+        pariatur iusto nostrum. Ratione velit est possimus corporis, rem nam quo
+        nesciunt, voluptates ipsum vel aperiam magnam. Earum inventore, a iure
+        fugit dolorum odit voluptate! Molestias impedit enim autem. Fugiat totam
+        saepe earum quae, mollitia cum assumenda eius nobis ut itaque excepturi
+        minima, vel vitae dicta hic! Temporibus ea quisquam eaque distinctio
+        quibusdam enim non dolorum unde commodi tenetur nihil aperiam
+        praesentium a nulla facere, suscipit, illum, molestias totam optio
+        sequi. Commodi illo mollitia animi iure eius. Minus nesciunt
+        repellendus, corrupti voluptatem quo doloremque id sunt! Laboriosam cum
+        nostrum aliquam rerum magnam provident, necessitatibus beatae, quas
+        aliquid blanditiis voluptate, culpa recusandae nisi. In libero cum eius
+        obcaecati? Eaque, corrupti nesciunt saepe recusandae veritatis impedit
+        rem aliquam id consectetur error! Odio saepe libero recusandae? Nobis
+        laudantium dolore, dicta expedita omnis quaerat nostrum reprehenderit
+        totam similique corporis nulla dolor!
+      </p>
+    </section>
+    <p>
+        <ul>
+            <li>
+                <a href="#">Back to Top</a>
+            </li>
+            <li>
+                <a href="#section1">Back to section1</a>
+            </li>
+            <li>
+                <a href="about.html">About me</a>
+            </li>
+        </ul>
+    </p>
+  </body>
+</html>
